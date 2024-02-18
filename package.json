@@ -19,6 +19,7 @@
     "@astrojs/rss": "^4.0.4",
     "@astrojs/sitemap": "^3.0.5",
     "@astrojs/tailwind": "^5.1.0",
+    "@fontsource/twinkle-star": "^5.0.18",
     "astro": "^4.3.2",
     "astro-auto-import": "^0.4.2",
     "astro-font": "^0.0.77",

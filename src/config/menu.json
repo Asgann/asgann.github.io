@@ -1,57 +1,38 @@
 {
   "main": [
     {
-      "name": "Accueil",
-      "url": "/"
-    },
-    {
-      "name": "À propos",
+      "name": "Comment ça marche ?",
       "url": "/about"
     },
     {
-      "name": "Elements",
-      "url": "/elements"
+      "name": "FAQ",
+      "url": "/faq"
     },
+
     {
-      "name": "Pages",
+      "name": "Réseaux",
       "url": "",
       "hasChildren": true,
       "children": [
         {
-          "name": "Contact",
-          "url": "/contact"
+          "name": "Entreprises",
+          "url": "/confiance"
         },
         {
-          "name": "Blog",
-          "url": "/blog"
-        },
-        {
-          "name": "Authors",
-          "url": "/authors"
-        },
-        {
-          "name": "Categories",
-          "url": "/categories"
-        },
-        {
-          "name": "Tags",
-          "url": "/tags"
-        },
-        {
-          "name": "404 Page",
-          "url": "/404"
+          "name": "Partenaires",
+          "url": "/partenaires"
         }
       ]
     }
   ],
   "footer": [
     {
-      "name": "Elements",
-      "url": "/elements"
+      "name": "Mentions Légales et données personnelles",
+      "url": "/mentionslegales"
     },
     {
-      "name": "Privacy Policy",
-      "url": "/privacy-policy"
+      "name": "FAQ",
+      "url": "/faq"
     }
   ]
 }

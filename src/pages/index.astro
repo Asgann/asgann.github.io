@@ -3,10 +3,14 @@ import ImageMod from "@/components/ImageMod.astro";
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
+import AuthorCard from "@/components/AuthorCard.astro";
 import Testimonial from "@/partials/Testimonial.astro";
 import type { Button, Feature } from "@/types";
 import { getEntry } from "astro:content";
 import { FaCheck } from "react-icons/fa";
+import "@fontsource/twinkle-star";
+import { getSinglePage } from "@/lib/contentParser.astro";
+
 
 interface Homepage {
   banner: {
@@ -21,6 +25,10 @@ interface Homepage {
 const homepage = await getEntry("homepage", "-index");
 const testimonial = await getEntry("sections", "testimonial");
 const call_to_action = await getEntry("sections", "call-to-action");
+const COLLECTION_FOLDER = "authors";
+
+const authorIndex = await getEntry(COLLECTION_FOLDER, "-index");
+const authors = await getSinglePage(COLLECTION_FOLDER);
 const { banner, features }: Homepage = homepage.data;
 ---
 
@@ -108,7 +116,22 @@ const { banner, features }: Homepage = homepage.data;
     ))
   }
   <!-- /Features -->
+  
+  <section class="section-sm pb-0">
+    <div class="container">
+      <div class="row justify-center">
+        <h2  set:html={markdownify(authorIndex.data.title)} class="mb-4" />
 
+        {
+          authors.map((author) => (
+            <div class="mb-14 md:col-6 lg:col-4">
+              <AuthorCard data={author} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>  
   <Testimonial testimonial={testimonial} />
   <CallToAction call_to_action={call_to_action} />
 </Base>
