@@ -1,12 +1,12 @@
 ---
 # Banner
 banner:
-  title: "The Ultimate Starter Template You Need To Start Your Astro Project"
-  content: "Astroplate is a free starter template built with Astro and TailwindCSS, providing everything you need to jumpstart your Astro project and save valuable time."
+  title: "Asgann: débarassez vous de vos fringues !"
+  content: "Asgann revends pour vous vos vêtements à des gens moins stylés que vous"
   image: "/images/banner.png"
   button:
     enable: true
-    label: "Get Started For Free"
+    label: "Commencez maintenant"
     link: "https://github.com/zeon-studio/astroplate"
 
 # Features
