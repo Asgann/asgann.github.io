@@ -8,17 +8,13 @@ const { pourquoi } = Astro.props;
     <section class="section-sm mygreen">
       <div class="container">
         <div class="row">
-          <div class="mx-auto  mb-10 text-center md:col-10 lg:col-8 xl:col-6">
             <h2 set:html={markdownify(pourquoi.data.title)} class="mb-3" />
-          </div>
-          <div class="col-12">
-              <div class="swiper-wrapper">
                 {pourquoi.data.pourquoi.map(
                   (item: {
                     title: string;
                     description: string;
                   }) => (
-                    <div >
+                  <div class="mb-14 md:col-4 lg:col-3">
                       <div class="px-2 py-2 ">
                         <div class="flex items-center">
                           <div class="rounded blackandwhite listof p-8 text-center">
@@ -36,8 +32,7 @@ const { pourquoi } = Astro.props;
                   ),
                 )}
              
-            </div>
-          </div>
+             
         </div>
       </div>
     </section>
