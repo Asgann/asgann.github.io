@@ -2,7 +2,7 @@
   "main": [
     {
       "name": "Comment ça marche ?",
-      "url": "/about"
+      "url": "#commentcamarche"
     },
     {
       "name": "FAQ",
@@ -11,18 +11,7 @@
 
     {
       "name": "Réseaux",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Entreprises",
-          "url": "/confiance"
-        },
-        {
-          "name": "Partenaires",
-          "url": "/partenaires"
-        }
-      ]
+      "url": "#confiance"
     }
   ],
   "footer": [

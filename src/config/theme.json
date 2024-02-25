@@ -6,7 +6,9 @@
         "body": "#F2E5D3",
         "border": "#eaeaea",
         "theme_light": "#6F927F",
-        "theme_dark": ""
+        "purple": "#3E337C",
+        "beige": "#F2E5D3",
+        "green": "#6F927F"
       },
       "text_color": {
         "default": "#444444",
@@ -17,9 +19,9 @@
   },
   "fonts": {
     "font_family": {
-      "primary": "Inter:wght@400;600",
+      "primary": "Raleway:wght@400;600",
       "primary_type": "sans-serif",
-      "secondary": "Inter:wght@500;700",
+      "secondary": "Raleway:wght@500;700",
       "secondary_type": "sans-serif"
     },
     "font_size": { "base": "16", "scale": "1.250" }

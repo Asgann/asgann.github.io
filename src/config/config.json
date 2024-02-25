@@ -6,8 +6,8 @@
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
 
-    "logo_width": "150",
-    "logo_height": "30",
+    "logo_width": "250",
+    "logo_height": "50",
     "logo_text": "Asgann"
   },
 
@@ -28,7 +28,7 @@
 
   "navigation_button": {
     "enable": true,
-    "label": "Get Started",
+    "label": "Découvrir maintenant",
     "link": "https://github.com/zeon-studio/astroplate"
   },
 

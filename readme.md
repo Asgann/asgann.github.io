@@ -1,3 +1,5 @@
+https://www.whoz.com/en/
+
 <h1 align=center>Astro + Tailwind CSS + TypeScript Starter and Boilerplate</h1>
 
 <p align=center>Astroplate is a free starter template built with Astro, TailwindCSS & TypeScript, providing everything you need to jumpstart your Astro project and save valuable time.</p>
@@ -109,12 +111,14 @@ docker run -it --rm astroplate ash
 ```
 
 <!-- reporting issue -->
+
 ## 🐞 Reporting Issues
 
 We use GitHub Issues as the official bug tracker for this Template. Please Search [existing issues](https://github.com/zeon-studio/astroplate/issues). It’s possible someone has already reported the same problem.
 If your problem or idea has not been addressed yet, feel free to [open a new issue](https://github.com/zeon-studio/astroplate/issues).
 
 <!-- licence -->
+
 ## 📝 License
 
 Copyright (c) 2023 - Present, Designed & Developed by [Zeon Studio](https://zeon.studio/)

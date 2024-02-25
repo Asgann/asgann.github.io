@@ -4,18 +4,18 @@ import ImageMod from "./ImageMod.astro";
 import Social from "./Social.astro";
 
 const { data } = Astro.props;
-const { title, image, social } = data.data;
+const { title, image } = data.data;
 ---
 
-<div class="rounded bg-theme-light p-8 text-center">
+<div class="rounded listof p-8 text-center">
   {
     image && (
       <ImageMod
         class="mx-auto mb-6 rounded"
         src={image}
         alt={title}
-        width={120}
-        height={120}
+        width={300}
+        height={300}
         format="webp"
       />
     )
@@ -23,8 +23,7 @@ const { title, image, social } = data.data;
   <h4 class="mb-3">
     <a href={`/authors/${data.slug}`}>{title}</a>
   </h4>
-  <p class="mb-4">
-    {plainify(data.body?.slice(0, 100))}
+  <p class="mb-3">
+    {plainify(data.body?.slice(0, 500))}
   </p>
-  <Social source={social} className="social-icons" />
 </div>

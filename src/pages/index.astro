@@ -4,12 +4,15 @@ import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
 import AuthorCard from "@/components/AuthorCard.astro";
-import Testimonial from "@/partials/Testimonial.astro";
+import Testimonial from "@/partials/Companies.astro";
+import Typeofcontact from "@/partials/TypeOfContact.astro";
+import Pourquoi from "@/partials/Pourquoi.astro";
 import type { Button, Feature } from "@/types";
 import { getEntry } from "astro:content";
 import { FaCheck } from "react-icons/fa";
 import "@fontsource/twinkle-star";
 import { getSinglePage } from "@/lib/contentParser.astro";
+import Companies from "@/partials/Companies.astro";
 
 
 interface Homepage {
@@ -23,9 +26,11 @@ interface Homepage {
 }
 
 const homepage = await getEntry("homepage", "-index");
-const testimonial = await getEntry("sections", "testimonial");
+const companies = await getEntry("sections", "companies");
+const typeofcontact = await getEntry("sections", "typeofcontact");
+const pourquoi = await getEntry("sections", "pourquoi");
 const call_to_action = await getEntry("sections", "call-to-action");
-const COLLECTION_FOLDER = "authors";
+const COLLECTION_FOLDER = "steps";
 
 const authorIndex = await getEntry(COLLECTION_FOLDER, "-index");
 const authors = await getSinglePage(COLLECTION_FOLDER);
@@ -104,7 +109,7 @@ const { banner, features }: Homepage = homepage.data;
                   </li>
                 ))}
               </ul>
-              {feature.button.enable && (
+              {feature.button && (
                 <a class="btn btn-primary mt-5" href={feature.button.link}>
                   {feature.button.label}
                 </a>
@@ -117,7 +122,7 @@ const { banner, features }: Homepage = homepage.data;
   }
   <!-- /Features -->
   
-  <section class="section-sm pb-0">
+  <section id="commentcamarche" class="section-sm pb-0">
     <div class="container">
       <div class="row justify-center">
         <h2  set:html={markdownify(authorIndex.data.title)} class="mb-4" />
@@ -132,6 +137,7 @@ const { banner, features }: Homepage = homepage.data;
       </div>
     </div>
   </section>  
-  <Testimonial testimonial={testimonial} />
-  <CallToAction call_to_action={call_to_action} />
+  <Companies companies={companies} />
+  <Pourquoi pourquoi={pourquoi}/>
+  <Typeofcontact typeofcontact={typeofcontact}/>
 </Base>

@@ -1,0 +1,81 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+import ImageMod from "@/components/ImageMod.astro";
+const { companies } = Astro.props;
+---
+
+{
+  companies.data.enable && (
+    <section id="confiance" class="section-sm blackandwhite">
+      <div class="container">
+        <div class="row">
+          <div class="mx-auto mb-10 text-center md:col-8 lg:col-8 xl:col-6">
+            <h2 set:html={markdownify(companies.data.title)} class="mb-2" />
+          </div>
+          <div class="col-12">
+            <div class="swiper testimonial-slider">
+              <div class="swiper-wrapper">
+                {companies.data.companies.map(
+                  (item: {
+                    name: string;
+                    image: string;
+                  }) => (
+                    <div class="swiper-slide">
+                      <div class="px-3 py-3 ">
+                        <div class="mt-11 flex items-center">
+                          <div class="text-dark ">
+                            <ImageMod
+                              height={200}
+                              width={200}
+                              src={item.image}
+                              alt={item.name}
+                              format="webp"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ),
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+<script>
+  import { Swiper } from "swiper";
+  import "swiper/css";
+  import "swiper/css/pagination";
+  import { Autoplay, Pagination } from "swiper/modules";
+
+  // astro:page-load event is fired when the page is loaded
+  document.addEventListener("astro:page-load", () => {
+    new Swiper(".testimonial-slider", {
+      modules: [Pagination, Autoplay],
+      spaceBetween: 24,
+      loop: true,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".testimonial-slider-pagination",
+        type: "bullets",
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  });
+</script>

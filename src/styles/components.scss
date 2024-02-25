@@ -174,3 +174,23 @@
   @apply prose-tr:border-border;
   @apply prose-td:relative prose-td:z-10 prose-td:px-3 prose-td:py-[18px];
 }
+
+.mygreen {
+  background-color: #6f927f;
+}
+
+.listof {
+  h4 {
+    font-weight: 550;
+    font-size: 1.4rem;
+  }
+}
+.blackandwhite {
+  background-color: white;
+  color: black;
+}
+
+.purple {
+  background-color: #3e337c;
+  color: white;
+}
