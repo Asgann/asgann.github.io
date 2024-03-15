@@ -10,7 +10,7 @@ import config from "./src/config/config.json";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://asgann.github.io",
+  site: "https://asgann.com",
   base: "/",
   trailingSlash: config.site.trailing_slash ? "always" : "never",
   image: {
